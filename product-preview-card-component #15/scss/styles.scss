@@ -1,0 +1,128 @@
+@use 'variables';
+@use 'initial';
+
+.card {
+  width: 343px;
+  height: 611px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 56px auto;
+  background-color: variables.$White;
+  &__first-section__image {
+    width: 100%;
+  }
+
+  &__second-section {
+    &__product-type {
+      color: variables.$Dark-grayish-blue;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 5px;
+      margin: 20px 0 12px 24px;
+    }
+    &__title {
+      color: variables.$Very-dark-blue;
+      font-family: variables.$Fraunces;
+      font-size: 32px;
+      line-height: 32px;
+      margin: 0 24px 16px 24px;
+      //top left botom right
+    }
+    &__description {
+      color: variables.$Dark-grayish-blue;
+      font-size: 14px;
+      line-height: 23px;
+      margin: 0 24px 21px 24px;
+    }
+    &__price {
+      display: flex;
+      gap: 19px;
+      align-items: center;
+      margin-bottom: 17px;
+      &__new {
+        color: variables.$Dark-cyan;
+        font-size: 32px;
+        font-weight: 700;
+        font-family: variables.$Fraunces;
+        margin-left: 24px;
+      }
+      &__old {
+        color: variables.$Dark-grayish-blue;
+        text-decoration: line-through;
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+    &__button {
+      width: 295px;
+      height: 48px;
+      display: block;
+      margin: auto;
+      background-color: variables.$Dark-cyan;
+      border: none;
+      border-radius: 8px;
+      color: variables.$White;
+      font-weight: 700;
+      line-height: 17px;
+      &:hover {
+        cursor: pointer;
+        background-color: variables.$Very-dark-green;
+      }
+      &__icon {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    width: 600px;
+    height: 450px;
+    display: flex;
+    &__first-section__image {
+      width: 300px;
+      height: 450px;
+      content: url('../images/image-product-desktop.jpg');
+    }
+    &__second-section {
+      width: 300px;
+      height: 450px;
+      &__product-type {
+        line-height: 14px;
+        margin-top: 32px;
+        margin-left: 32px;
+        margin-bottom: 20px;
+        margin-right: 176px;
+      }
+      &__title{
+        color: variables.$Very-dark-blue;
+        margin: 0 32px 24px 32px
+      }
+      &__description {
+        width: 237px;
+        height: 92px;
+        font-weight: 500;
+        line-height: 23px;
+        margin: 0 32px 29px 32px;
+      //top left botom right
+      }
+      &__price {
+        margin-left: 10px;
+        margin-bottom: 30px;
+      }
+      &__button {
+        width: 236px;
+        height: 48px;
+        margin: 0 32px 32px 32px;
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
