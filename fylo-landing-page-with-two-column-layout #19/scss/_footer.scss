@@ -1,0 +1,69 @@
+@use 'variables';
+@use 'initial';
+@use 'mixins';
+
+.footer{
+    background-color: variables.$Very-Dark-Blue;
+    color: variables.$Light-Grayish-Blue;
+    padding: 65px 65px 45px 39px;
+    &__logo{
+        margin-bottom: 30px;
+    }
+    &__phone-container{
+        height: 20px;
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+        a{
+            text-decoration: none;
+            color: variables.$Light-Grayish-Blue;
+            &:hover{
+                color: variables.$Bright-Blue;
+            }
+        }
+    }
+    &__email-container{
+        @extend .footer__phone-container;
+    }
+    ul{
+        margin-bottom: 16px;
+        line-height: 30px;
+        li{
+            list-style: none;
+            &:hover{
+                cursor: pointer;
+                color: variables.$Bright-Blue;
+            }
+        }
+    }
+    &__social-media-container{
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        align-items: center;
+        gap: 30px;
+        .social-icon{
+            border: 1px solid variables.$Light-Grayish-Blue;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            &:hover{
+                cursor: pointer;
+                border-color: variables.$Bright-Blue;
+                color: variables.$Bright-Blue;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px){
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 110px 256px 72px 80px;
+        // align-items: ;
+    }
+}

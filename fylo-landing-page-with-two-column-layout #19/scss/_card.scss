@@ -1,0 +1,44 @@
+@use 'variables';
+@use 'initial';
+@use 'mixins';
+
+.card {
+    background-color: variables.$white;
+    width: 286px;
+    height: 175px;
+    padding: 20px 20px 24px;
+    margin: auto;
+    border-radius: 4px;
+    box-shadow: 0 0 20px variables.$Light-Gray;
+
+    &__text {
+        font-size: 0.67em;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .avatar-container {
+        display: flex;
+        font-size: 0.67em;
+
+        &__image {
+            margin-right: 10px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50px;
+        }
+
+        &__name {
+            font-weight: 700;
+        }
+    }
+}
+@media (min-width: 1440px){
+    .card{
+        margin: 0;
+        &__text {
+            font-size: 0.72em;
+        }
+    }
+    
+}
