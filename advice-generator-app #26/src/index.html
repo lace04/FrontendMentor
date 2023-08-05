@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+  </head>
+  <body class="bg-darkBlue font-Manrope">
+    <article
+      class="bg-darkGrayishBlue text-center mt-[120px] mb-[232px] w-[342px] h-[315px] mx-auto rounded-xl px-[30px] py-10 pb-4 relative md:w-[542px] md:h-[333px]"
+    >
+      <!-- Advice ID goes here -->
+      <h2
+        class="text-neonGreen uppercase text-[12px] mb-6 tracking-[3px]md:text-18px"
+      >
+        Advice # <span id="adviceId">0</span>
+      </h2>
+      <!-- Advice text goes here -->
+      <p
+        class="text-lightCyan text-[22px] md:text-[30px] md:line-height: .75rem;"
+        id="advice"
+      >
+        <!-- "It is easy to sit up and take notice, what's difficult is getting up
+        and taking action." -->
+      </p>
+
+      <picture>
+        <source
+          media="(max-width: 640px)"
+          srcset="../images/pattern-divider-mobile.svg"
+        />
+        <source
+          media="(min-width: 641px)"
+          srcset="../images/pattern-divider-desktop.svg"
+        />
+
+        <img src="" alt="" class="mx-auto mt-[21px] md:mt-[35px]" />
+      </picture>
+
+      <div
+        id="diceBtn"
+        class="bg-neonGreen w-[66px] h-[66px] rounded-full grid place-content-center absolute bottom-[-33px] left-[138px] cursor-pointer hover:shadow-custom transition duration-300 ease-in-out md:left-[238px]"
+      >
+        <img src="../images/icon-dice.svg" alt="dado" />
+      </div>
+    </article>
+
+    <footer>
+      <div class="attribution text-lightCyan">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          ><b class="text-neonGreen">Frontend Mentor</b></a
+        >. Coded by
+        <a href="https://github.com/lace04" target="_blank"
+          ><b class="text-neonGreen">Lace04</b></a
+        >.
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
