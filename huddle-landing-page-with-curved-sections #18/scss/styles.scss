@@ -1,0 +1,277 @@
+@use 'variables';
+@use 'mixins';
+
+body {
+    font-family: variables.$Body-font;
+    color: variables.$Very-Dark-Cyan;
+}
+
+.main-container {
+    width: 375px;
+    margin: 0 auto 25px;
+    @include mixins.desktop-view(1440px);
+}
+
+.navbar {
+    //border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px auto 100px;
+    width: 350px; //pendiente
+    @include mixins.desktop-view (1300px);
+
+    &__logo {
+        width: 95px;
+        height: 16px;
+        @include mixins.desktop-view (240px, 38px);
+    }
+
+    &__button {
+        @include mixins.button (variables.$white, variables.$Light-Pink, variables.$Light-Pink, 80px, 24px, false);
+        @include mixins.desktop-view (134px, 42px);
+        @include mixins.button-hover(variables.$Light-Pink);
+    }
+}
+
+.header {
+    &__title {
+        font-family: variables.$Headings-font;
+        text-align: center;
+        width: 265px;
+        font-size: 1.48em;
+        margin: 0 auto 36px;
+        @include mixins.desktop-view (1010px, unset, 2.98em);
+    }
+
+    &__description {
+        text-align: center;
+        margin: 0 auto 69px;
+        font-size: 0.8em;
+        width: 290px;
+        @include mixins.desktop-view (800px, 80px, 1.6em);
+    }
+
+    &__button {
+        @include mixins.button (variables.$Pink, unset, variables.$Very-Pale-Blue, 200px, 40px, true);
+        @include mixins.desktop-view (400px, 80px, 1.25em);
+        @include mixins.button-hover(variables.$Light-Pink);
+        margin-bottom: 90px;
+    }
+
+    &__screen-mockups {
+        width: 300px;
+        display: block;
+        margin: 0 auto 138px;
+        @include mixins.desktop-view (1020px, 725px);
+    }
+}
+
+.section-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mixins.section-stats-desktop;
+
+    .comunities {
+        @include mixins.stats(32px);
+        @include mixins.stats-desktop(50px);
+    }
+
+    .messages {
+        @include mixins.stats(24px) {
+            width: 69px;
+            margin: auto;
+        }
+
+        @include mixins.stats-desktop(42px);
+    }
+
+    @include mixins.banner('', '../images/bg-section-top-mobile-1.svg');
+    @include mixins.banner-desktop('', '../images/bg-section-top-desktop-1.svg');
+
+}
+
+.section-grow-together {
+    background-color: variables.$Very-Pale-Blue;
+    @include mixins.flex-sections;
+    @include mixins.flex-sections-desktop(row-reverse);
+}
+
+.section-flowing-conversations {
+    @include mixins.flex-sections;
+    @include mixins.flex-sections-desktop;
+    @include mixins.banner('../images/bg-section-bottom-mobile-1.svg', '../images/bg-section-top-mobile-2.svg');
+    @include mixins.banner-desktop('../images/bg-section-bottom-desktop-1.svg', '../images/bg-section-top-desktop-2.svg');
+}
+
+.section-your-users {
+    background-color: variables.$Very-Pale-Blue;
+    @include mixins.flex-sections;
+    @include mixins.flex-sections-desktop(row-reverse);
+
+}
+
+.section-your-comunity {
+    @include mixins.banner('../images/bg-section-bottom-mobile-2.svg', '../images/bg-footer-top-mobile.svg');
+    @include mixins.banner-desktop('../images/bg-section-bottom-desktop-2.svg', '../images/bg-footer-top-desktop.svg');
+    height: 400px;
+    padding-top: 250px;
+
+    &__title {
+        margin-top: 0;
+        @extend .header__title;
+    }
+
+    &__button {
+        @extend .header__button;
+    }
+
+    @media (min-width: 1440px) {
+        .section-your-comunity {
+            height: 500px;
+        }
+    }
+}
+
+.newsletter {
+    background-color: variables.$Very-Dark-Cyan;
+    color: variables.$Very-Pale-Blue;
+    padding: 70px 25px 40px;
+}
+
+@media (min-width: 1440px) {
+    .newsletter {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    .newsletter-contact {
+        &__logo-huddle {
+            width: 250px;
+        }
+
+        &__description {
+            font-size: 1.1em;
+            width: 370px;
+        }
+    }
+}
+
+.newsletter-subscription {
+    margin-bottom: 100px;
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+
+    &__description {
+        font-size: 0.95em;
+        margin-bottom: 30px;
+    }
+
+    &__input {
+        width: 100%;
+        height: 50px;
+        border-radius: 8px;
+        border: none;
+        margin-bottom: 15px;
+    }
+
+    &__submit-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__submit {
+        @include mixins.button (variables.$Pink, unset, variables.$Very-Pale-Blue, 200px, 40px, false);
+        border-radius: 8px;
+
+        @include mixins.desktop-view (400px, 80px, 1.25em);
+        @include mixins.button-hover(variables.$Light-Pink);
+    }
+}
+
+@media (min-width: 1440px) {
+    .newsletter-subscription{
+        display: flex;
+        width: 580px;
+        height: 240px;
+        &__title{
+            font-size: 1.6em;
+        }
+        &__description{
+            font-size: 1.1em;
+            margin-bottom: 32px;
+        }
+        &__input{
+            width: 90%;
+        }
+        &__submit{
+            width: 160px;
+            height: 50px;
+        }
+        &__submit-container{
+            align-items: flex-end;
+        }
+    }
+}
+
+.newsletter-contact {
+    &__logo-huddle {
+        width: 205px;
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        font-size: 0.95em;
+        margin-bottom: 30px;
+    }
+
+    &__phone-container {
+        margin-bottom: 15px;
+    }
+
+    &__anchor {
+        text-decoration: none;
+        color: variables.$Very-Pale-Blue;
+        margin-left: 20px;
+    }
+
+    &__email-container {
+        margin-bottom: 50px;
+    }
+
+    &__social-container {
+        width: 110px;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .newsletter-contact {
+        &__logo-huddle {
+            width: 250px;
+        }
+
+        &__description {
+            font-size: 1.1em;
+            width: 370px;
+        }
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    align-items: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
