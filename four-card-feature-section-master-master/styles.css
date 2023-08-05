@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: var(--Very-Light-Gray);
+  color: var(--Very-Dark-Blue);
+  width: 375px;
+  margin: auto;
+}
+
+.main-container {
+  width: 80%;
+  margin: 82px auto;
+}
+
+.header__title {
+  font-weight: 200;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.header__stitle {
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.header__description {
+  color: var(--Grayish-Blue);
+  text-align: center;
+  margin: 0 auto 80px;
+}
+
+.cards {
+  border-radius: 8px;
+  background-color: var(--Very-Light-Gray);
+  box-shadow: 3px 10px 10px var(--Grayish-Blue);
+  margin-bottom: 30px;
+  min-width: 310px;
+  max-width: 500px;
+  height: 220px;
+  overflow: hidden;
+}
+
+.card1 .line {
+  background-color: var(--Cyan);
+  width: 100%;
+  height: 4px;
+}
+
+.card2 .line {
+  background-color: var(--Red);
+  width: 100%;
+  height: 4px;
+}
+
+.card3 .line {
+  background-color: var(--Orange);
+  width: 100%;
+  height: 4px;
+}
+
+.card4 .line {
+  background-color: var(--Blue);
+  width: 100%;
+  height: 4px;
+}
+
+.card__content {
+  padding: 30px;
+}
+
+.card__title {
+  margin-top: 0;
+}
+
+.card__description {
+  color: var(--Grayish-Blue);
+  font-size: 0.89em;
+  margin: 5px 0 30px 0;
+}
+
+.card__image {
+  text-align: right;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    font-size: 0.9375rem;
+    width: 600px;
+    margin: auto;
+  }
+
+  header {
+    max-width: 525px;
+  }
+
+  .header__title {
+    font-size: 2.5em;
+  }
+
+  .header__stitle {
+    font-size: 2.3em;
+  }
+  .header__description {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 1440px) {
+  body{
+    width: 1440px;
+  }
+  .header{
+    margin:auto;
+  }
+  .cards-containter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+  }
+  .cards {
+    min-width: 350px;
+    max-width: 350px;
+  }
+}
