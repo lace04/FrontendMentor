@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,600&display=swap");
+
+$Font: "Josefin Sans", sans-serif;
+
+$Desaturated-Red: hsl(0, 36%, 70%);
+$Soft-Red: hsl(0, 93%, 68%);
+$Dark-Grayish-Red: hsl(0, 6%, 24%);
+$Gradient1: hsl(0, 0%, 100%);
+$Gradient2: hsl(0, 100%, 98%);
+$Gradient3: hsl(0, 80%, 86%);
+$Gradient4: hsl(0, 74%, 74%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $Font;
+  color: $Desaturated-Red;
+}
+
+.container {
+  //   border: 1px solid red;
+  width: 375px;
+  height: 800px;
+  margin: 0 auto 80px;
+  background-color: $Gradient2;
+
+  &__logo {
+    width: 100px;
+    margin: 30px;
+  }
+
+  &__image {
+    margin-bottom: 60px;
+  }
+
+  &__content {
+    &__title {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 2.5em;
+      font-weight: 700;
+      letter-spacing: 11px;
+      color: $Dark-Grayish-Red;
+      margin-bottom: 23px;
+      &--red {
+        color: $Desaturated-Red;
+        font-weight: 300;
+      }
+    }
+    &__description {
+      margin: 0 40px 32px;
+      text-align: center;
+      font-size: 0.85em;
+      line-height: 1.6em;
+    }
+    &__form {
+      width: 310px;
+      height: 50px;
+      margin: 0 auto;
+      position: relative;
+      &__email {
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        border: 1px solid $Gradient3;
+        padding-left: 28px;
+        outline: none;
+        background-color: $Gradient2;
+        // background-image: url('./images/icon-error.svg');
+        background-repeat: no-repeat;
+        background-position: 210px 12px;
+        &::placeholder {
+          color: $Gradient3;
+        }
+        &--error {
+          font-size: 0.85em;
+          margin: 8px 0 0 14px;
+          color: $Soft-Red;
+        }
+      }
+      &__button {
+        position: absolute;
+        right: 0;
+        width: 68px;
+        height: 50px;
+        border-radius: 50px;
+        padding: 14px 25px;
+        background: linear-gradient(135deg, $Gradient3, $Gradient4);
+        &:hover {
+          background: linear-gradient(135deg, $Gradient2, $Gradient4);
+          box-shadow: 0 10px 15px $Gradient4;
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    height: 800px;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    position: relative;
+
+    &__logo {
+      width: 160px;
+      margin: 64px 0 0 166px;
+    }
+
+    &__image {
+      content: url("./images/hero-desktop.jpg");
+      position: absolute;
+      right: 0;
+    }
+
+    &__content {
+      width: 444px;
+      margin: 133px 0 0 166px;
+      &__title {
+        text-align: left;
+        font-size: 4em;
+        letter-spacing: 15px;
+        line-height: 67px;
+        margin-bottom: 25px;
+      }
+      &__description {
+        text-align: left;
+        font-size: 1em;
+        line-height: 1.7em;
+        margin-left: 0px;
+        width: 450px;
+        margin-bottom: 40px;
+      }
+      &__form {
+        width: 100%;
+        height: 60px;
+        &__email {
+          background-position: 300px 18px;
+        }
+        &__button {
+          width: 100px;
+          height: 60px;
+          padding: 20px 45px;
+        }
+      }
+    }
+  }
+}
