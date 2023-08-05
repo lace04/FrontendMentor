@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body class="font-Hanken-Grotesk">
+    <section
+      class="w-[375px] mx-auto bg-white mb-10 shadow-lg shadow-dark-gray-blue-alphas md:flex md:mt-6 md:w-[740px] md:h-[512px] md:rounded-3xl"
+    >
+      <div
+        class="bg-gradient-to-b from-light-slate-blue to bg-cobalt-blue h-[356px] pt-8 px-10 text-center rounded-b-3xl md:w-[370px] md:h-full md:rounded-3xl md:pt-[45px]"
+      >
+        <h2 class="mb-6 text-light-lavender font-bold text-normal md:mb-6">
+          Your Result
+        </h2>
+        <div
+          class="bg-gradient-to-b from-cobalt-blue to bg-light-light-slate-blue rounded-full h-[140px] w-[140px] mx-auto grid place-content-center mb-6 text-normal md:mb-8 md:h-[200px] md:w-[200px]"
+        >
+          <p class="text-white text-6xl font-bold md:text-7xl">76</p>
+          <p class="text-light-lavender">of 100</p>
+        </div>
+        <p class="text-white text-xl font-bold mb-2 md:text-3xl md:mb-3">
+          Great
+        </p>
+        <p class="text-light-lavender md:text-xl">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+
+      <div class="p-8 h-[454px] md:w-[370px] md:py-11 md:px-10 ">
+        <h2 class="text-normal mb-4 font-bold md:text-2xl">Summary</h2>
+        <div class="bg-light-red-alpha summary">
+          <p class="text-light-red flex gap-2 font-semibold">
+            <img src="../assets/images/icon-reaction.svg" alt="Reaction" />
+            <span>Reaction</span>
+          </p>
+          <p class="text-dark-gray-blue font-bold">
+            80 <span class="text-dark-gray-blue-alpha">/ 100</span>
+          </p>
+        </div>
+
+        <div class="bg-orangey-yellow-alpha summary">
+          <p class="text-orangey-yellow flex gap-2 font-semibold">
+            <img src="../assets/images/icon-memory.svg" alt="Memory" />
+            <span>Memory</span>
+          </p>
+          <p class="text-dark-gray-blue font-bold">
+            92 <span class="text-dark-gray-blue-alpha">/ 100</span>
+          </p>
+        </div>
+        <div class="bg-green-teal-alpha summary">
+          <p class="text-green-teal flex gap-2 font-semibold">
+            <img src="../assets/images/icon-verbal.svg" alt="Verbal" />
+            <span>Verbal</span>
+          </p>
+          <p class="text-dark-gray-blue font-bold">
+            61 <span class="text-dark-gray-blue-alpha">/ 100</span>
+          </p>
+        </div>
+
+        <div class="bg-cobalt-blue-alpha summary">
+          <p class="text-cobalt-blue flex gap-2 font-semibold">
+            <img src="../assets/images/icon-visual.svg" alt="Visual" />
+            <span>Visual</span>
+          </p>
+          <p class="text-dark-gray-blue font-bold">
+            72 <span class="text-dark-gray-blue-alpha">/ 100</span>
+          </p>
+        </div>
+        <button
+          class="bg-dark-gray-blue mt-2 md:mt-6 text-white w-full h-14 rounded-3xl text-normal hover:bg-gradient-to-b from-light-slate-blue to-light-royal-blue"
+        >
+          Continue
+        </button>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/lace04" target="_blank">Lace04</a>.
+    </div>
+  </body>
+</html>

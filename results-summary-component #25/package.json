@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "start": "nodemon --exec \"npm run dev\""
+  },
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

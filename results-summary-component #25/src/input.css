@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.summary {
+  @apply flex place-content-between p-3 rounded-lg mb-4 h-[54px] items-center md:text-xl md:px-4;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
