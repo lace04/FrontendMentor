@@ -1,0 +1,14 @@
+@use 'variables';
+
+* {
+    margin: 200;
+    padding: 200;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: variables.$Font;
+    font-size: 12px;
+    background: linear-gradient(180deg, variables.$Soft-violet, variables.$Soft-blue);
+    height: 100vh;
+}

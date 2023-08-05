@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 200;
+  padding: 200;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  background: linear-gradient(180deg, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  height: 100vh;
+}
+
+.main-container {
+  background-color: #fff;
+  width: 330px;
+  min-height: 536px;
+  margin: 147px auto 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px hsl(238deg, 29%, 16%);
+  padding: 24px;
+}
+.main-container__s1__image {
+  width: 240px;
+  display: block;
+  margin: -130px auto 0;
+}
+.main-container__s1__image--shadow {
+  width: 240px;
+  margin: -75px auto 0;
+  content: url(../images/bg-pattern-mobile.svg);
+}
+.main-container__s2__title {
+  margin: 24px 0 30px;
+  font-size: 2.5em;
+  text-align: center;
+}
+.main-container__s2__details {
+  margin: 16px 0;
+  font-size: 1.05em;
+  position: relative;
+}
+.main-container__s2__details[open] {
+  font-weight: 700;
+}
+.main-container__s2__details__summary {
+  list-style: none;
+}
+.main-container__s2__details__summary:hover {
+  cursor: pointer;
+  color: hsl(14deg, 88%, 65%);
+}
+.main-container__s2__details__icon {
+  position: absolute;
+  right: 5px;
+  transition: 300ms;
+}
+.main-container__s2__details[open] .main-container__s2__details__icon {
+  transform: rotate(180deg);
+  transition: 300ms;
+}
+.main-container__s2__details__paragraph {
+  color: hsl(240deg, 6%, 50%);
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+@media (min-width: 1440px) {
+  .main-container {
+    width: 924px;
+    display: flex;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-position-x: -536px;
+    background-position-y: -281px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .main-container__s1 {
+    width: 100%;
+  }
+  .main-container__s1__image {
+    width: 474px;
+    margin: 67px 0 0 -130px;
+  }
+  .main-container__s1__image--shadow {
+    content: "";
+  }
+  .main-container__s2 {
+    width: 100%;
+    padding: 15px 80px 20px 40px;
+  }
+  .main-container__s2__title {
+    text-align: left;
+    margin-bottom: 32px;
+  }
+  .main-container__s2__details {
+    margin-bottom: 26px;
+  }
+  .main-container__s2__line {
+    border-color: transparent;
+    border-bottom-color: hsl(240deg, 5%, 91%);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
