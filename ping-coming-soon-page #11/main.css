@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+/* Variables */
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Blue: hsl(223, 87%, 63%);
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin: auto;
+  width: 375px;
+}
+
+.header__logo {
+  width: 55px;
+  margin-top: 85px;
+  margin-bottom: 45px;
+}
+
+.container__title {
+  font-weight: 300;
+  color: var(--Gray);
+  margin-bottom: 26px;
+}
+
+.container__title--bold {
+  color: var(--Very-Dark-Blue);
+}
+
+.container__subscribe {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 35px;
+}
+
+.container__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container__subscribe__email {
+  margin: auto;
+  width: 81.5%;
+  border: 1px solid var(--Pale-Blue);
+  border-radius: 25px;
+  font-size: 12px;
+  padding: 13px 16px;
+  outline: none;
+  margin-bottom: 12px;
+}
+
+.container__subscribe__email::placeholder {
+  color: var(--Gray);
+  font-weight: 300;
+}
+
+.container__subscribe__btn {
+  margin: auto;
+  width: 81.5%;
+  background: var(--Blue);
+  border: none;
+  border-radius: 25px;
+  height: 40px;
+  color: var(--White);
+  box-shadow: 0px 5px 22px 0px var(--Pale-Blue);
+  outline: none;
+  margin-bottom: 70px;
+}
+
+.container__subscribe__btn:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.container__dashboard {
+  width: 93%;
+  margin-bottom: 120px;
+}
+
+.container__socials .icon {
+  margin-bottom: 30px;
+  color: var(--Blue);
+  width: 28px;
+  height: 28px;
+  padding: 14px 0;
+  border: 1px solid var(--Gray);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: var(--White);
+  background: var(--Blue);
+  border: none;
+  transition: 0.3s;
+}
+
+.container__copyright {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+@media (min-width: 1440px) {
+  body {
+    width: 1440px;
+    margin: auto;
+  }
+  .header__logo {
+    width: 88px;
+    margin-bottom: 60px;
+  }
+  .container__title {
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--Gray);
+    margin-bottom: 26px;
+    letter-spacing: 1px;
+  }
+  .container__subscribe {
+    font-size: 20px;
+    margin-bottom: 45px;
+  }
+  .container__form {
+    width: 640px;
+    height: 55px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 90px;
+  }
+  .container__subscribe__email {
+    width: 60%;
+    height: 55px;
+    padding: 10px 32px 10px 32px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-family: 'Libre Franklin', sans-serif;
+  }
+  .container__subscribe__btn {
+    width: 30%;
+    font-size: 17px;
+    height: 55px;
+    border-radius: 30px;
+  }
+  .container__dashboard {
+    width: 42%;
+    margin-bottom: 70px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
