@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --Transparent-white: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+  --Very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--Very-light-gray);
+}
+
+.main-container {
+  width: 327px;
+  margin: 87px auto 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  width: 100%;
+  height: 440px;
+  padding: 48px;
+}
+
+.card-sedans {
+  background-color: var(--Bright-orange);
+}
+
+.card-suvs {
+  background-color: var(--Dark-cyan);
+}
+
+.card-luxury {
+  background-color: var(--Very-dark-cyan);
+}
+
+.card__icon {
+  margin-bottom: 30px;
+}
+
+.card__title {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5em;
+  color: var(--Very-light-gray);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.card__description {
+  color: var(--Transparent-white);
+  font-size: 0.92em;
+  line-height: 25px;
+  margin-bottom: 24px;
+}
+
+.card__button {
+  width: 150px;
+  height: 50px;
+  background-color: var(--Very-light-gray);
+  border: none;
+  border-radius: 24px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  color: var(--Very-light-gray);
+  background-color: transparent;
+  border: 2px solid var(--Very-light-gray);
+}
+
+.sedans {
+  color: var(--Bright-orange);
+}
+
+.suvs {
+  color: var(--Dark-cyan);
+}
+
+.luxury {
+  color: var(--Very-dark-cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1440px) {
+  .main-container {
+    flex-direction: row;
+    width: 920px;
+    margin-top: 172px;
+  }
+  article {
+    width: 100%;
+    height: 500px;
+    padding: 48px;
+  }
+  .card__description {
+    font-size: 1em;
+    line-height: 25px;
+    margin-bottom: 87px;
+  }
+}
