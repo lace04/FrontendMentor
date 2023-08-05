@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Very-dark-blue: hsl(233, 47%, 7%); /*(main background) */
+  --Dark-desaturated-blue: hsl(244, 38%, 16%); /* (card background) */
+  --Soft-violet: hsl(277, 64%, 61%); /*  (accent) */
+
+  --White: hsl(0, 0%, 100%); /* (main heading, stats) */
+  --Slightly-transparent-white1: hsla(0, 0%, 100%, 0.75); /* (main paragraph) */
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6); /* (stat headings) */
+  --Layer: rgba(110, 30, 160, 0.7);
+
+  --FBody: "Inter", sans-serif;
+  --FHead: "Lexend Deca", sans-serif;
+}
+
+body {
+  font-size: 15px;
+  background-color: var(--Very-dark-blue);
+  font-family: var(--FHead);
+}
+
+.card {
+  margin: 87px auto 88px;
+  width: 327px;
+  height: 780px;
+  background-color: var(--Dark-desaturated-blue);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image {
+  background-image: url(./images/image-header-mobile.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 240px;
+  margin-bottom: 40px;
+}
+
+#layer {
+  background-color: var(--Layer);
+  width: 100%;
+  height: 100%;
+}
+
+.card__title {
+  width: 90%;
+  text-align: center;
+  color: var(--White);
+  font-family: var(--FBody);
+  /* font-weight: 700; */
+  margin: 0 auto 14px;
+  font-size: 1.9em;
+  line-height: 32.5px;
+}
+
+.card__title--color {
+  color: var(--Soft-violet);
+}
+
+.card__paragraph {
+  width: 80%;
+  color: var(--Slightly-transparent-white1);
+  font-family: var(--FBody);
+  text-align: center;
+  margin: 0 auto 40px;
+  font-size: 1em;
+  line-height: 25px;
+}
+
+.card__stats {
+  text-align: center;
+}
+
+.card__stats__num {
+  color: var(--White);
+  font-size: 1.5em;
+  font-family: var(--FBody);
+  font-weight: 700;
+}
+
+.card__stats__up {
+  text-transform: uppercase;
+  color: var(--Slightly-transparent-white);
+  font-family: var(--FBody);
+  font-size: 0.85em;
+  line-height: 25px;
+  letter-spacing: 1px;
+  padding: 5px 0px 23px 0px;
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    margin: 178px auto;
+    width: 1110px;
+    height: 450px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .image {
+    background-image: url(./images/image-header-desktop.jpg);
+    background-size: cover;
+    width: 540px;
+    height: 450px;
+  }
+  .card__title {
+    width: 420px;
+    margin-top: 72px;
+    margin-left: 70px;
+    margin-bottom: 27px;
+    font-size: 2.4em;
+    line-height: 43px;
+    text-align: left;
+  }
+  .card__paragraph {
+    text-align: left;
+    margin-left: 70px;
+    margin-bottom: 70px;
+    padding-right: 45px;
+    font-size: 1.1em;
+  }
+  .card__stats {
+    width: 450px;
+    margin-left: 70px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
