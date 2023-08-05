@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+  --White: hsl(0, 0%, 100%);
+  --Blue-shadow: hsla(248, 32%, 49%, 0.50);
+  --Font: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--Font);
+  font-size: 16px;
+  background-color: var(--Red);
+  background-image: url("./images/bg-intro-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-container {
+  width: 330px;
+  margin: 96px auto 40px;
+}
+
+.container__title {
+  color: var(--White);
+  width: 235px;
+  font-size: 1.7em;
+  line-height: 36px;
+  margin: -6px auto 23px;
+}
+
+.container__description {
+  color: var(--White);
+  text-align: center;
+  margin: 0 10px 62px;
+  line-height: 26px;
+}
+
+.offer {
+  background-color: var(--Blue);
+  width: 330px;
+  height: 88px;
+  padding: 22px 75px;
+  color: var(--White);
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 7px 0 var(--Blue-shadow);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
