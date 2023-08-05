@@ -1,0 +1,41 @@
+@use "initial";
+@use "variables";
+@use "header";
+@use "modal-navbar";
+@use "navbar";
+@use "gallery";
+@use "details";
+@use "input";
+@use "modal-cart";
+@use "modal-gallery";
+
+.main-container {
+  width: 375px;
+  height: 900px;
+  margin: auto;
+  position: relative;
+  @media (min-width: 1115px) {
+    width: 1115px;
+  }
+}
+
+.content{
+  @media (min-width: 1115px) {
+    display: flex;
+    padding: 90px 50px;
+    gap: 124px;
+  }
+}
+
+.show{
+  display: block;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
