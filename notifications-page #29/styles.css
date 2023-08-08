@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --VeryLightGrayishBlue: hsl(210, 60%, 98%);
+  --LightGrayishBlue1: hsl(211, 68%, 94%);
+  --LightGrayishBlue2: hsl(205, 33%, 90%);
+  --GrayishBlue: hsl(219, 14%, 63%);
+  --DarkGrayishBlue: hsl(219, 12%, 42%);
+  --VeryDarkBlue: hsl(224, 21%, 14%);
+}
+
+body {
+  font-size: 16px;
+  font-family: Plus Jakarta Sans;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+.main {
+  padding: 24px 16px;
+}
+
+.notifications {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  & .title {
+    color: var(--VeryDarkBlue);
+    font-weight: 800;
+    font-size: 1.25em; /* 20px */
+    word-spacing: 9px;
+  }
+
+  & .number {
+    display: inline-block;
+    background-color: var(--Blue);
+    color: var(--White);
+    width: 32px;
+    height: 25px;
+    text-align: center;
+    border-radius: 6px;
+  }
+
+  & .mark {
+    color: var(--DarkGrayishBlue);
+    font-size: 0.875em; /* 14px */
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      color: -var(--Blue);
+    }
+  }
+}
+
+.post {
+  background-color: var(--VeryLightGrayishBlue);
+  border-radius: 8px;
+  display: flex;
+  gap: 13px;
+  padding: 16px;
+  min-width: 343px;
+  font-size: 0.875em; /* 14px */
+  cursor: pointer;
+  color: var(--DarkGrayishBlue);
+  margin: 0 auto 10px;
+  position: relative;
+
+  & .image {
+    width: 39px;
+    height: 39px;
+  }
+
+  & .name {
+    font-weight: 800;
+    color: var(--VeryDarkBlue);
+    &:hover {
+      color: var(--Blue);
+    }
+  }
+
+  & .reaction {
+    font-weight: 800;
+    &:hover {
+      color: var(--Blue);
+    }
+  }
+
+  & .time {
+    color: var(--GrayishBlue);
+    font-size: 0.875em; /* 14px */
+    font-weight: 500;
+  }
+
+  & .group {
+    color: var(--Blue);
+    font-weight: 800;
+  }
+
+  & .message-container {
+    border: 1px solid var(--LightGrayishBlue2);
+    border-radius: 5px;
+    padding: 16px;
+    margin-top: 12px;
+    &:hover {
+      background-color: var(--LightGrayishBlue1);
+    }
+  }
+
+  & .picture {
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    right: 16px;
+  }
+}
+
+.not-read {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 8px;
+  background-color: var(--Red);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  .main {
+    width: 730px;
+    margin: 0 auto;
+  }
+  .post {
+    font-size: 1em; /* 16px */
+  }
+}
