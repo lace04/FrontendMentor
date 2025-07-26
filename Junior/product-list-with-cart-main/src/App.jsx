@@ -1,10 +1,13 @@
-function App() {
+import { CardsContainer } from './components/card-container';
 
+function App() {
   return (
     <>
-     <h1 className="bg-red-500">Ambulancia</h1>
+      <h1>Desserts</h1>
+      <CardsContainer />
+      Your Cart Your added items will appear here
     </>
-  )
+  );
 }
 
-export default App
+export default App;
